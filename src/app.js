@@ -62,3 +62,4 @@ ReactDOM.render(jsx, document.getElementById('app'));
 //dowload heroku cli instal 
 //run heroku login
 //heroku create expencify-app
+//git push heroku master
