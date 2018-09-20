@@ -51,4 +51,14 @@ ReactDOM.render(jsx, document.getElementById('app'));
 
 //adding your project to git
 //git init //install ssh key\
-//eval "$(ssh-agent -s)"
+//extract text webpack plugin- it allow us to extract some text outside the bundle.js
+//we can extract the css file out of bundule.js
+//npm install --save-dev extract-text-webpack-plugin
+
+//install express for devlopment server 
+
+
+//use heroku. to deployee app
+//dowload heroku cli instal 
+//run heroku login
+//heroku create expencify-app
