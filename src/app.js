@@ -65,3 +65,4 @@ ReactDOM.render(jsx, document.getElementById('app'));
 //git push heroku master
 //for devlopment dependency which is not use as devlopment server use npm install chalk --dev
 //to install dependency of production server use npm install --production
+//use numeral js to modify currency format numeraljs.com  npm install numeral@2.0.6
