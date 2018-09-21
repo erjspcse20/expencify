@@ -11,6 +11,27 @@ const config = {
 };
 
 firebase.initializeApp(config);
+
+const database = firebase.database();
+const onValueChange = database.ref().on('value', (snapshot) => {
+    console.log(snapshot.val());
+}, (e) => {
+    console.log('error with data fetching', e);
+});
+
+setTimeout(()=>{
+    database.ref().off(onValueChange);
+},5000);
+
+setTimeout(()=>{
+    database.ref().off(onValueChange);
+},7000);
+
+setTimeout(()=>{
+    database.ref().off(onValueChange);
+},8000);
+
+
 firebase.database().ref().set({
     name: 'jai pandey',
     age: 26,
@@ -50,9 +71,10 @@ firebase.database().ref().set({
 //     }).catch((e) => {
 //         console.log('this failed',e);
 //     });
-database.ref().update({
-    stressLevel: 9,
-    'job/company': 'Amazon',
-    'location/city': 'Seattle'
-});
+
+// database.ref().update({
+//     stressLevel: 9,
+//     'job/company': 'Amazon',
+//     'location/city': 'Seattle'
+// });
 //console.log('requested to change data');
