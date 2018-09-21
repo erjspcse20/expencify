@@ -63,3 +63,5 @@ ReactDOM.render(jsx, document.getElementById('app'));
 //run heroku login
 //heroku create expencify-app
 //git push heroku master
+//for devlopment dependency which is not use as devlopment server use npm install chalk --dev
+//to install dependency of production server use npm install --production
