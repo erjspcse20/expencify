@@ -12,44 +12,45 @@ const config = {
 
 firebase.initializeApp(config);
 
-const database = firebase.database();
-const onValueChange = database.ref().on('value', (snapshot) => {
-    console.log(snapshot.val());
-}, (e) => {
-    console.log('error with data fetching', e);
-});
+//const database = firebase.database();
+// const onValueChange = database.ref().on('value', (snapshot) => {
+//     console.log(snapshot.val());
+// }, (e) => {
+//     console.log('error with data fetching', e);
+// });
 
-setTimeout(()=>{
-    database.ref().off(onValueChange);
-},5000);
+// setTimeout(()=>{
+//     database.ref().off(onValueChange);
+// },5000);
 
-setTimeout(()=>{
-    database.ref().off(onValueChange);
-},7000);
+// setTimeout(()=>{
+//     database.ref().off(onValueChange);
+// },7000);
 
-setTimeout(()=>{
-    database.ref().off(onValueChange);
-},8000);
+// setTimeout(()=>{
+//     database.ref().off(onValueChange);
+// },8000);
 
 
 firebase.database().ref().set({
     name: 'jai pandey',
-    age: 26,
-    stressLevel:6,
-    isSingle: true,
-    job: {
-        title: 'software devloper',
-        company: 'sael'
-    },
-    location: {
-        city: 'New Delhi',
-        country: 'India'
-    }
-}).then(() => {
-    console.log('Data is save');
-}).catch((e) => {
-    console.log('this failed',e);
+    // age: 26,
+    // stressLevel:6,
+    // isSingle: true,
+    // job: {
+    //     title: 'software devloper',
+    //     company: 'sael'
+    // },
+    // location: {
+    //     city: 'New Delhi',
+    //     country: 'India'
+    // }
 });
+// .then(() => {
+//     console.log('Data is save');
+// }).catch((e) => {
+//     console.log('this failed',e);
+// });
 
 // database.ref('age').set(27);
 // database.ref('location/city').set('Delhi');
