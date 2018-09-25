@@ -1,5 +1,22 @@
 import uuid from 'uuid';
 
+//action to database
+
+//component call action generator
+//action genrator return object
+//component dispaches object
+//redux store change
+
+//to do above procedure we nned to do below procedure in redux way
+
+//component call action generator
+//action genarator return function
+//component dispaches function(?)
+//function runs(has the ablity to dispatch order action and do whatever it wants)
+
+
+//for this we need to intall some tool like redux-thunk which is middlware for redux npm install redux-thunk and add it to reconfigur strore of redux
+
 // ADD_EXPENSE
 export const addExpense = (
   {
