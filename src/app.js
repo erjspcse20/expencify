@@ -4,25 +4,24 @@ import { Provider } from 'react-redux';
 
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { addExpense } from './action/expenses';
+import { startSetExpenses } from './action/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import './firebase/firebase';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'water bill', amount: 400, createdAt: -1000 }));
-store.dispatch(addExpense({ description: 'Gas bill', amount: 2000, createdAt: 1000 }));
-store.dispatch(addExpense({ description: 'Rent', amount: 1025000, createdAt: 200 }));
-
 const jsx =(
     <Provider store={store}>
         <AppRouter />
     </Provider>
 );
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
+store.dispatch(startSetExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById('app'));
+});
 
-ReactDOM.render(jsx, document.getElementById('app'));
 
 
 // store.dispatch(addExpense({ description: 'water bill', amount: 100, createdAt: -1000 }));

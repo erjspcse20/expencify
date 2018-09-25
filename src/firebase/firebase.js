@@ -1,6 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/database'; 
-import 'firebase/storage'; 
+import * as firebase from 'firebase';
+
 const config = {
     apiKey: "AIzaSyBhfGdyQDZ0FB8UbeLbb9NYDqAhHPRGtWo",
     authDomain: "expencify-ffd18.firebaseapp.com",
@@ -13,6 +12,8 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+
+export { firebase, database as default };
 
 // // child_removed
 //   database.ref('expenses').on('child_removed', (snapshot) => {
